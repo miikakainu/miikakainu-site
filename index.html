@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="description" content="Miika Kainu – valokuvaus, lyhytvideot, minidokumentit ja äänisuunnittelu. Helsinki.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>Miika Kainu – Photo &amp; Film</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
+<style>
+/* Layout: one narrow centred column like a letter; wordmark on top, project names as navigation, images get full column width */
+:root{
+  --paper:#f3f1ec;
+  --ink:#1b1c1a;
+  --muted:#6b6d66;
+  --accent:#2f5a46;      /* kuusenvihreä */
+  --accent-soft:#8fae9c;
+  --ph:#dcd9d1;          /* image placeholder */
+  --rule:#cfccc3;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --serif:"EB Garamond",Garamond,Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#171816;--ink:#ecebe6;--muted:#9a9c94;--accent:#9cc7b0;--accent-soft:#5d7f6d;--ph:#2a2c28;--rule:#33352f;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#171816;--ink:#ecebe6;--muted:#9a9c94;--accent:#9cc7b0;--accent-soft:#5d7f6d;--ph:#2a2c28;--rule:#33352f;color-scheme:dark}
+
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1.2rem;line-height:1.5;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:46rem;margin:0 auto;padding-block:3.5rem 4rem;display:flex;flex-direction:column;gap:3.5rem}
+.draft{font-family:var(--display);letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;color:var(--muted);text-align:center}
+
+header{text-align:center;display:flex;flex-direction:column;gap:1.2rem;align-items:center}
+.mark{font-family:var(--display);font-weight:700;font-size:clamp(3rem,11vw,5.2rem);line-height:.9;letter-spacing:.04em;margin:0}
+nav{display:flex;gap:1.6rem;flex-wrap:wrap;justify-content:center}
+nav a,.label{font-family:var(--display);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.95rem;color:var(--ink);text-decoration:none}
+nav a:hover,nav a:focus-visible{color:var(--accent)}
+
+.lead h1{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.15;text-wrap:balance;margin:0 0 1rem;color:var(--accent)}
+.lead p{margin:0;max-width:36rem}
+.services{font-family:var(--display);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.9rem;color:var(--muted);margin-top:1.4rem !important}
+
+.ph{background:var(--ph);border-radius:2px;display:flex;align-items:flex-end;justify-content:flex-start;padding:.7rem .9rem;
+  font-family:var(--display);letter-spacing:.1em;text-transform:uppercase;font-size:.75rem;color:var(--muted);max-width:100%}
+.hero{aspect-ratio:16/9}
+
+.projects{display:flex;flex-direction:column}
+.projects h2,.text h2,.contact h2{margin:0 0 1rem}
+details{border-top:1px solid var(--rule)}
+details:last-child{border-bottom:1px solid var(--rule)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.75rem 0}
+summary::-webkit-details-marker{display:none}
+summary .name{font-family:var(--display);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:clamp(1.4rem,4.4vw,1.9rem);color:var(--accent)}
+summary .kind{font-style:italic;color:var(--muted);font-size:1rem;text-align:right}
+summary:hover .name,summary:focus-visible .name{color:var(--ink)}
+summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+details[open] summary .name{color:var(--ink)}
+.case{display:flex;flex-direction:column;gap:1rem;padding:0 0 1.6rem}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:.6rem}
+.grid .ph{aspect-ratio:4/5}.grid .ph:first-child{aspect-ratio:auto}
+.case p{margin:0;max-width:36rem}
+
+.text p{margin:0 0 1.1rem;max-width:34rem}
+.text p:last-child{margin:0}
+
+.contact{text-align:center;display:flex;flex-direction:column;gap:.3rem;align-items:center}
+.contact .label{margin-bottom:.4rem}
+.contact .mail{font-style:italic;user-select:all}
+.contact .where{color:var(--muted)}
+footer{text-align:center;font-family:var(--display);letter-spacing:.12em;text-transform:uppercase;font-size:.75rem;color:var(--muted)}
+@media (max-width:520px){.grid{grid-template-columns:1fr}.grid .ph:first-child{aspect-ratio:4/3}}
+@media (prefers-reduced-motion:no-preference){summary .name{transition:color .2s}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="draft">Luonnos 1 · kuvat ja tekstit paikkamerkkejä</div>
+
+  <header>
+    <p class="mark">MIIKA KAINU</p>
+    <nav aria-label="Päävalikko"><a href="#tyot">Työt</a><a href="#tapa">Työtapa</a><a href="#yhteys">Yhteys</a></nav>
+  </header>
+
+  <section class="lead">
+    <h1>Aitoa kuvaa ja ääntä, joka saa ihmiset pysähtymään.</h1>
+    <p>Teen yrityksille, yhteisöille ja museoille valokuvia, lyhytvideoita ja dokumentaarisia tuotantoja. Kuvaan, äänitän ja leikkaan itse alusta loppuun.</p>
+    <p class="services">Valokuvaus · Lyhytvideot · Minidokumentit · Äänisuunnittelu · Helsinki</p>
+  </section>
+
+  <div class="ph hero" role="img" aria-label="Paikka showreel-luupille">Showreel-luuppi, 16:9 · mobiilissa pystyversio</div>
+
+  <section class="projects" id="tyot">
+    <h2 class="label">Työt</h2>
+    <details open>
+      <summary><span class="name">Muru</span><span class="kind">Valokuva · ravintola avautuu</span></summary>
+      <div class="case">
+        <div class="grid"><div class="ph">DOTS-kuva</div><div class="ph">Kuva 2</div></div>
+        <p>Ravintola Murun avauspäivä. Päällikkö sohvalla hetkeä ennen ovien avaamista, tarjoilija päästää ensimmäiset asiakkaat sisään.</p>
+      </div>
+    </details>
+    <details>
+      <summary><span class="name">Lusto</span><span class="kind">Näyttelyvideot · metsämuseo</span></summary>
+      <div class="case">
+        <div class="grid"><div class="ph">Still videosta</div><div class="ph">Kuva 2</div></div>
+        <p>Metsämuseo Luston uudistuneen näyttelyn kaikki videot: metsäsuhde, hyvinvointi ja tehometsätalous.</p>
+      </div>
+    </details>
+    <details>
+      <summary><span class="name">ProAgria</span><span class="kind">Selitysvideot · lapsille</span></summary>
+      <div class="case">
+        <div class="grid"><div class="ph">Still videosta</div><div class="ph">Kuva 2</div></div>
+        <p>Animaatiosarja alakoululaisille siitä, mistä ruoka tulee. Kuvasin pohjat, joiden päälle animaattori ja ääninäyttelijät rakensivat maatilan.</p>
+      </div>
+    </details>
+    <details>
+      <summary><span class="name">Ajattelun alusta</span><span class="kind">Minidokumentit · 2026</span></summary>
+      <div class="case">
+        <div class="grid"><div class="ph">Henkilökuva</div><div class="ph">BTS</div></div>
+        <p>Lyhyet henkilöesittelyt Ajattelun alustan tekijöistä. Kuvaukset alkavat marraskuussa.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="text" id="tapa">
+    <h2 class="label">Työtapa</h2>
+    <p>Kuvaan arkea.<br>Ihmisiä työssään, tiloja ennen kuin ovet aukeavat,<br>pieniä hetkiä, jotka muuten jäisivät huomaamatta.</p>
+    <p>Kaksikymmentä vuotta mediataloissa opetti tekemään nopeasti ja tarkasti.<br>Nyt teen saman omalla nimelläni.</p>
+    <p>Hoidan kuvan, äänen ja leikkauksen itse,<br>joten sinulla on yksi ihminen, jolle soittaa.<br>Sovitaan hinta ennen kuin aloitan.</p>
+    <p>Kotoisin Vetelistä, töissä Helsingistä,<br>valmis lähtemään sinne, missä tarina on.</p>
+  </section>
+
+  <section class="contact" id="yhteys">
+    <h2 class="label">Yhteys</h2>
+    <p style="margin:0"><strong>Miika Kainu</strong></p>
+    <p class="mail" style="margin:0">mk@miikakainu.com</p>
+    <p style="margin:0">puhelinnumero tähän</p>
+    <p class="where" style="margin:0">Helsinki · koko Suomi</p>
+  </section>
+
+  <footer>Miika Kainu · Y-tunnus 3556591-7 · Instagram @miika_kainu</footer>
+</div>
+</body>
+</html>
